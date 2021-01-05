@@ -9,7 +9,7 @@ def delete_from_aws(bucket, s3_object):
     try:
         s3.delete_object(
             Bucket=bucket, 
-            gitKey=s3_object)
+            Key=s3_object)
         print("Delete Successful")
         return True
     except FileNotFoundError:
